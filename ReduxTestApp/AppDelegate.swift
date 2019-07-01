@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import ReSwift
+
+let mainStore = Store(
+    reducer: AppReducer,
+    state: nil
+)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var applicationCoordinator: ApplicationCoordinator = {
+        return ApplicationCoordinator(window: self.window!)
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.applicationCoordinator.start()
         return true
     }
 
