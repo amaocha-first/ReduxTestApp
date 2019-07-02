@@ -71,21 +71,19 @@
                                 <rect key="frame" x="332" y="333" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="finish"/>
-                                <connections>
-                                    <action selector="finishButton:" destination="zPJ-Tc-B9m" eventType="touchUpInside" id="gsd-0D-31Z"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mLY-qa-pSS"/>
                     </view>
                     <connections>
+                        <outlet property="finishButton" destination="Dh8-C6-GJU" id="SCF-VN-WZv"/>
                         <outlet property="textField" destination="To7-vT-9Hc" id="aDJ-mj-Cqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3z-fw-Yp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="139"/>
+            <point key="canvasLocation" x="840.57971014492762" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

@@ -7,24 +7,30 @@
 //
 import UIKit
 import ReSwift
+import RxSwift
+import RxCocoa
 
 final class SecondViewController: UIViewController {
     
-    
+    let disposeBag = DisposeBag()
+    var secondViewModel = SecondViewModel()
+
+    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textField.text = mainStore.state.main.text
-    }
-    @IBAction func finishButton(_ sender: Any) {
-        mainStore.dispatch(MainState.mainAction.setTextFieldText(text: textField.text!))
-    }
-}
-
-extension SecondViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        // NOTE: dispatch関数を使用して、Actionを送信する。対応するReduserが検知し、新たなStateが作成され更新されます。
         
+        ///Viewが立ち上がるたびにシングルトンである唯一のデータストアのmainStoreからプロパティを参照してくる
+        self.textField.text = mainStore.state.main.text
+        
+        ///viewModelのインスタンス生成
+        secondViewModel = SecondViewModel()
+        
+        finishButton.rx.tap.subscribe({ [weak self] _ in
+            guard let selfVC = self else { return }
+            mainStore.dispatch(MainState.mainAction.setTextFieldText(text: selfVC.textField.text!))
+        })
     }
+    
 }

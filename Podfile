@@ -7,4 +7,7 @@ target 'ReduxTestApp' do
 
   # Pods for ReduxTestApp
 pod 'ReSwift'
+pod 'RxSwift'
+pod ’RxCocoa’
+pod 'RxOptional'
 end

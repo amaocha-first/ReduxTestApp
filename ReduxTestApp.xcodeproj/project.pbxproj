@@ -15,6 +15,7 @@
 		CC7FF24022CA0A2A002BFC32 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF23F22CA0A2A002BFC32 /* ApplicationCoordinator.swift */; };
 		CC7FF24222CA0A92002BFC32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24122CA0A92002BFC32 /* ViewController.swift */; };
 		CC7FF24422CA0B1A002BFC32 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24322CA0B1A002BFC32 /* SecondViewController.swift */; };
+		CC7FF24622CA433E002BFC32 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24522CA433E002BFC32 /* SecondViewModel.swift */; };
 		CCE3B71F22C9FA2F00BA74CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3B71E22C9FA2F00BA74CD /* AppDelegate.swift */; };
 		CCE3B72422C9FA2F00BA74CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE3B72222C9FA2F00BA74CD /* Main.storyboard */; };
 		CCE3B72622C9FA3000BA74CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3B72522C9FA3000BA74CD /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		CC7FF23F22CA0A2A002BFC32 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		CC7FF24122CA0A92002BFC32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC7FF24322CA0B1A002BFC32 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CC7FF24522CA433E002BFC32 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		CCE3B71B22C9FA2F00BA74CD /* ReduxTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE3B71E22C9FA2F00BA74CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCE3B72322C9FA2F00BA74CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				CC7FF23F22CA0A2A002BFC32 /* ApplicationCoordinator.swift */,
 				CC7FF24122CA0A92002BFC32 /* ViewController.swift */,
 				CC7FF24322CA0B1A002BFC32 /* SecondViewController.swift */,
+				CC7FF24522CA433E002BFC32 /* SecondViewModel.swift */,
 			);
 			path = ReduxTestApp;
 			sourceTree = "<group>";
@@ -212,12 +215,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReduxTestApp/Pods-ReduxTestApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,6 +269,7 @@
 				CC7FF23E22CA02EC002BFC32 /* AppReducer.swift in Sources */,
 				CC7FF24422CA0B1A002BFC32 /* SecondViewController.swift in Sources */,
 				CCE3B73122C9FA4200BA74CD /* AppState.swift in Sources */,
+				CC7FF24622CA433E002BFC32 /* SecondViewModel.swift in Sources */,
 				CC7FF23522C9FDB7002BFC32 /* MainAction.swift in Sources */,
 				CC7FF22F22C9FC60002BFC32 /* MainState.swift in Sources */,
 				CC7FF24222CA0A92002BFC32 /* ViewController.swift in Sources */,
