@@ -10,4 +10,8 @@ pod 'ReSwift'
 pod 'RxSwift'
 pod ’RxCocoa’
 pod 'RxOptional'
+pod 'RxDataSources'
+pod 'RxAlamofire'
+pod 'ObjectMapper'
+
 end

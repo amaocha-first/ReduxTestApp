@@ -1,7 +1,19 @@
 PODS:
+  - Alamofire (4.8.2)
+  - Differentiator (3.1.0)
+  - ObjectMapper (3.5.1)
   - ReSwift (4.0.1)
+  - RxAlamofire (4.4.0):
+    - RxAlamofire/Core (= 4.4.0)
+  - RxAlamofire/Core (4.4.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 4.4)
   - RxAtomic (4.4.1)
   - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxOptional (3.6.2):
     - RxCocoa (~> 4.0)
@@ -10,26 +22,39 @@ PODS:
     - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
+  - ObjectMapper
   - ReSwift
+  - RxAlamofire
   - RxCocoa
+  - RxDataSources
   - RxOptional
   - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Differentiator
+    - ObjectMapper
     - ReSwift
+    - RxAlamofire
     - RxAtomic
     - RxCocoa
+    - RxDataSources
     - RxOptional
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  RxAlamofire: ecc5e458ee11250938d23360179eb3a37cd3ee1e
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: 3ca0aa9ad3d4c79585741308e6d628972c39622b
+PODFILE CHECKSUM: c3e2eb81f1b1c4e5627b5bba844ef9a3f92d505d
 
 COCOAPODS: 1.5.3

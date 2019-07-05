@@ -17,6 +17,9 @@
 		CC7FF24422CA0B1A002BFC32 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24322CA0B1A002BFC32 /* SecondViewController.swift */; };
 		CC7FF24622CA433E002BFC32 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24522CA433E002BFC32 /* SecondViewModel.swift */; };
 		CC7FF24F22CB27F8002BFC32 /* MainMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7FF24E22CB27F8002BFC32 /* MainMiddleware.swift */; };
+		CC96EEF722D0036800F18A73 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96EEF622D0036800F18A73 /* RepositoriesViewModel.swift */; };
+		CC96EEFB22D0047000F18A73 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96EEFA22D0047000F18A73 /* RepositoriesViewController.swift */; };
+		CC96EF0022D004B100F18A73 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96EEFF22D004B100F18A73 /* Repository.swift */; };
 		CCC3C26F22CDA9AE0060F9E5 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3C26E22CDA9AE0060F9E5 /* UserNameViewController.swift */; };
 		CCC3C27122CDA9BF0060F9E5 /* UserNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3C27022CDA9BF0060F9E5 /* UserNameViewModel.swift */; };
 		CCE3B71F22C9FA2F00BA74CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3B71E22C9FA2F00BA74CD /* AppDelegate.swift */; };
@@ -39,6 +42,9 @@
 		CC7FF24322CA0B1A002BFC32 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CC7FF24522CA433E002BFC32 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		CC7FF24E22CB27F8002BFC32 /* MainMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiddleware.swift; sourceTree = "<group>"; };
+		CC96EEF622D0036800F18A73 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		CC96EEFA22D0047000F18A73 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		CC96EEFF22D004B100F18A73 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CCC3C26E22CDA9AE0060F9E5 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		CCC3C27022CDA9BF0060F9E5 /* UserNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewModel.swift; sourceTree = "<group>"; };
 		CCE3B71B22C9FA2F00BA74CD /* ReduxTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,12 +119,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CC7FF24B22CB23B8002BFC32 /* Routing */ = {
+		CC7FF24B22CB23B8002BFC32 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				CC7FF23F22CA0A2A002BFC32 /* ApplicationCoordinator.swift */,
 			);
-			path = Routing;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		CC7FF25022CB27FC002BFC32 /* Middleware */ = {
@@ -129,10 +135,54 @@
 			path = Middleware;
 			sourceTree = "<group>";
 		};
+		CC96EEF522D0031E00F18A73 /* Sample2 */ = {
+			isa = PBXGroup;
+			children = (
+				CCC3C26E22CDA9AE0060F9E5 /* UserNameViewController.swift */,
+				CCC3C27022CDA9BF0060F9E5 /* UserNameViewModel.swift */,
+			);
+			path = Sample2;
+			sourceTree = "<group>";
+		};
+		CC96EEFC22D0047700F18A73 /* Sample3 */ = {
+			isa = PBXGroup;
+			children = (
+				CC96EEFD22D0049200F18A73 /* VIewModel */,
+				CC96EEFE22D0049A00F18A73 /* View */,
+				CC96EF0122D004C800F18A73 /* Model */,
+			);
+			path = Sample3;
+			sourceTree = "<group>";
+		};
+		CC96EEFD22D0049200F18A73 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC96EEF622D0036800F18A73 /* RepositoriesViewModel.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		CC96EEFE22D0049A00F18A73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC96EEFA22D0047000F18A73 /* RepositoriesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC96EF0122D004C800F18A73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC96EEFF22D004B100F18A73 /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CCE3B71222C9FA2F00BA74CD = {
 			isa = PBXGroup;
 			children = (
 				CCE3B71D22C9FA2F00BA74CD /* ReduxTestApp */,
+				CC96EEF522D0031E00F18A73 /* Sample2 */,
 				CCE3B71C22C9FA2F00BA74CD /* Products */,
 				18DCCC57F921D5A08A1582DF /* Pods */,
 				482D98D28B874E93C56C4C00 /* Frameworks */,
@@ -152,8 +202,6 @@
 			children = (
 				CCE3B71E22C9FA2F00BA74CD /* AppDelegate.swift */,
 				CCE3B72222C9FA2F00BA74CD /* Main.storyboard */,
-				CCC3C26E22CDA9AE0060F9E5 /* UserNameViewController.swift */,
-				CCC3C27022CDA9BF0060F9E5 /* UserNameViewModel.swift */,
 				CCE3B72522C9FA3000BA74CD /* Assets.xcassets */,
 				CCE3B72722C9FA3000BA74CD /* LaunchScreen.storyboard */,
 				CCE3B72A22C9FA3000BA74CD /* Info.plist */,
@@ -163,7 +211,8 @@
 				CC7FF23C22C9FFBC002BFC32 /* Reducer */,
 				CC7FF24A22CB23A5002BFC32 /* ViewModel */,
 				CC7FF24922CB239B002BFC32 /* ViewController */,
-				CC7FF24B22CB23B8002BFC32 /* Routing */,
+				CC7FF24B22CB23B8002BFC32 /* Coordinator */,
+				CC96EEFC22D0047700F18A73 /* Sample3 */,
 			);
 			path = ReduxTestApp;
 			sourceTree = "<group>";
@@ -255,9 +304,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReduxTestApp/Pods-ReduxTestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -265,9 +319,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -306,15 +365,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE3B71F22C9FA2F00BA74CD /* AppDelegate.swift in Sources */,
+				CC96EEFB22D0047000F18A73 /* RepositoriesViewController.swift in Sources */,
 				CC7FF23B22C9FFB9002BFC32 /* MainReducer.swift in Sources */,
 				CCC3C27122CDA9BF0060F9E5 /* UserNameViewModel.swift in Sources */,
 				CC7FF24F22CB27F8002BFC32 /* MainMiddleware.swift in Sources */,
 				CC7FF23E22CA02EC002BFC32 /* AppReducer.swift in Sources */,
 				CC7FF24422CA0B1A002BFC32 /* SecondViewController.swift in Sources */,
+				CC96EF0022D004B100F18A73 /* Repository.swift in Sources */,
 				CCE3B73122C9FA4200BA74CD /* AppState.swift in Sources */,
 				CC7FF24622CA433E002BFC32 /* SecondViewModel.swift in Sources */,
 				CC7FF23522C9FDB7002BFC32 /* MainAction.swift in Sources */,
 				CC7FF22F22C9FC60002BFC32 /* MainState.swift in Sources */,
+				CC96EEF722D0036800F18A73 /* RepositoriesViewModel.swift in Sources */,
 				CC7FF24222CA0A92002BFC32 /* ViewController.swift in Sources */,
 				CCC3C26F22CDA9AE0060F9E5 /* UserNameViewController.swift in Sources */,
 				CC7FF24022CA0A2A002BFC32 /* ApplicationCoordinator.swift in Sources */,
