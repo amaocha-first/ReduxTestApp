@@ -8,7 +8,11 @@
 
 import UIKit
 
-final class ApplicationCoordinator {
+protocol Coordinator {
+    func start()
+}
+
+final class ApplicationCoordinator: Coordinator {
     
     private let window: UIWindow
     

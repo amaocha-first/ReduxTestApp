@@ -15,6 +15,3 @@ extension MainState {
         case setTextFieldText(text: String)
     }
 }
-//struct MainAction: Action {
-//    var text: String
-//}

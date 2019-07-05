@@ -8,6 +8,8 @@
 
 import UIKit
 import ReSwift
+import RxSwift
+import RxCocoa
 
 protocol ViewControllerTransitionDelegate: class {
     func push()
@@ -18,13 +20,18 @@ final class ViewController: UIViewController {
     weak var transitionDelegate: ViewControllerTransitionDelegate?
     
     @IBOutlet weak var label: UILabel!
-    
+    @IBOutlet weak var transitionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        ///ボタンがタップされたら画面遷移するという関係性を宣言
+        transitionButton.rx.tap.subscribe(onNext: {[weak self] _ in
+            self?.transitionDelegate?.push()
+        })
     }
     
+    ///監視登録
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mainStore.subscribe(self) {
@@ -36,17 +43,14 @@ final class ViewController: UIViewController {
         }
     }
 
+    ///監視削除
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // 監視削除
         mainStore.unsubscribe(self)
-    }
-    
-    @IBAction func event(_ sender: Any) {
-        self.transitionDelegate?.push()
     }
 }
 
+///状態変化した時にViewの更新をする
 extension ViewController: StoreSubscriber {
     typealias StoreSubscriberStateType = MainState
     // NOTE: 監視しているの値が変更されてた場合に呼ばれる

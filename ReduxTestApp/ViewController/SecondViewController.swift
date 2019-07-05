@@ -12,10 +12,8 @@ import RxCocoa
 
 final class SecondViewController: UIViewController {
     
-    let disposeBag = DisposeBag()
-    var secondViewModel = SecondViewModel()
-
-    @IBOutlet weak var finishButton: UIButton!
+    private var secondViewModel = SecondViewModel()
+    
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
@@ -23,14 +21,10 @@ final class SecondViewController: UIViewController {
         
         ///Viewが立ち上がるたびにシングルトンである唯一のデータストアのmainStoreからプロパティを参照してくる
         self.textField.text = mainStore.state.main.text
-        
         ///viewModelのインスタンス生成
         secondViewModel = SecondViewModel()
-        
-        finishButton.rx.tap.subscribe({ [weak self] _ in
-            guard let selfVC = self else { return }
-            mainStore.dispatch(MainState.mainAction.setTextFieldText(text: selfVC.textField.text!))
-        })
+        ///イベントの購読をしてバインディング
+        secondViewModel.passTextToMainView(textField: textField)
     }
     
 }
